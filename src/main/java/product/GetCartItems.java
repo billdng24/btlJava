@@ -63,7 +63,7 @@ public class GetCartItems extends HttpServlet {
 					}
 				} else {
 					out.print("<div class='d-flex justify-content-center align-items-center'>");
-					out.print("<h6 class='display-6'>Cart Is Empty</h6>");
+					out.print("<h6 class='display-6'>Giỏ hàng trống</h6>");
 					out.print("</div>");
 					out.print("<input type='hidden' id='cart-page-total' value='" + cartTotal + "' >");
 				}
@@ -89,7 +89,7 @@ public class GetCartItems extends HttpServlet {
 					}
 				} else {
 					out.print("<div class='d-flex justify-content-center align-items-center'>");
-					out.print("<h6 class='display-6'>Cart Is Empty</h6>");
+					out.print("<h6 class='display-6'>Giỏ hàng trống</h6>");
 					out.print("</div>");
 					out.print("<input type='hidden' id='cart-page-total' value='" + cartTotal + "' >");
 				}

@@ -70,7 +70,7 @@
 												Reviews</span>
 										</a>
 										<button class="btn-wishlist" type="button"
-											data-bs-toggle="tooltip" title="Add to wishlist">
+											data-bs-toggle="tooltip" title="">
 											<i class="ci-heart"></i>
 										</button>
 									</div>
@@ -188,14 +188,14 @@
 							style="max-width: 42rem; z-index: 10;">
 							<div
 								class="pb-lg-5 mb-lg-5 text-center text-lg-start text-lg-nowrap">
-								<h3 class="h2 text-light fw-light pb-1 from-start">Hurry
-									up! Limited time offer.</h3>
+								<h3 class="h2 text-light fw-light pb-1 from-start">Hãy
+									nhanh lên! Ưu đãi trong thời gian có hạn.</h3>
 								<h2 class="text-light display-5 from-start delay-1">Computer
 									Accessories</h2>
 								<p class="fs-lg text-light pb-3 from-start delay-2">Laptops,
 									Cables, Printers, Displays &amp; much more...</p>
 								<div class="d-table scale-up delay-4 mx-auto mx-lg-0">
-									<a class="btn btn-primary" href="products-rs.jsp">Shop Now<i
+									<a class="btn btn-primary" href="products-rs.jsp">Mua ngay bây giờ<i
 										class="ci-arrow-right ms-2 me-n1"></i></a>
 								</div>
 							</div>
@@ -214,14 +214,14 @@
 							style="max-width: 42rem; z-index: 10;">
 							<div
 								class="pb-lg-5 mb-lg-5 text-center text-lg-start text-lg-nowrap">
-								<h3 class="h2 text-light fw-light pb-1 from-bottom">Hurry
-									up! Limited time offer.</h3>
+								<h3 class="h2 text-light fw-light pb-1 from-bottom">Hãy
+									nhanh lên! Ưu đãi trong thời gian có hạn.</h3>
 								<h2 class="text-light display-5 from-bottom delay-1">Women
 									Sportswear Sale</h2>
 								<p class="fs-lg text-light pb-3 from-bottom delay-2">Sneakers,
 									Keds, Sweatshirts, Hoodies &amp; much more...</p>
 								<div class="d-table scale-up delay-4 mx-auto mx-lg-0">
-									<a class="btn btn-primary" href="products-rs.jsp">Shop Now<i
+									<a class="btn btn-primary" href="products-rs.jsp">Mua ngay bây giờ<i
 										class="ci-arrow-right ms-2 me-n1"></i></a>
 								</div>
 							</div>
@@ -247,7 +247,7 @@
 								<p class="fs-lg text-light pb-3 from-top delay-2">Hats &amp;
 									Caps, Sunglasses, Bags &amp; much more...</p>
 								<div class="d-table scale-up delay-4 mx-auto mx-lg-0">
-									<a class="btn btn-primary" href="products-rs.jsp">Shop Now<i
+									<a class="btn btn-primary" href="products-rs.jsp">Mua ngay bây giờ<i
 										class="ci-arrow-right ms-2 me-n1"></i></a>
 								</div>
 							</div>
@@ -301,7 +301,7 @@
 		</section>
 		<!-- Products grid (Trending products)-->
 		<section class="container pt-md-3 pb-5 mb-md-3">
-			<h2 class="h3 text-center">Trending products</h2>
+			<h2 class="h3 text-center">Sản phẩm thịnh hành</h2>
 			<div class="row pt-4 mx-n2">
 
 				<%
@@ -320,7 +320,7 @@
 						<span class="badge bg-danger badge-shadow">Sale</span>
 						<button class="btn-wishlist btn-sm" type="button"
 							data-bs-toggle="tooltip" data-bs-placement="left"
-							title="Add to wishlist">
+							title="Thêm vào danh sách yêu thích">
 							<i class="ci-heart"></i>
 						</button>
 						<a
@@ -355,8 +355,8 @@
 
 			</div>
 			<div class="text-center pt-3">
-				<a class="btn btn-outline-accent" href="shop-categories.jsp">Browse
-					Categories<i class="ci-arrow-right ms-1"></i>
+				<a class="btn btn-outline-accent" href="shop-categories.jsp">Duyệt
+					Danh mục<i class="ci-arrow-right ms-1"></i>
 				</a>
 			</div>
 		</section>
@@ -368,10 +368,10 @@
 						class="d-sm-flex justify-content-between align-items-center bg-secondary overflow-hidden rounded-3">
 						<div
 							class="py-4 my-2 my-md-0 py-md-5 px-4 ms-md-3 text-center text-sm-start">
-							<h4 class="fs-lg fw-light mb-2">Hurry up! Limited time offer</h4>
-							<h3 class="mb-4">Converse All Star on Sale</h3>
-							<a class="btn btn-primary btn-shadow btn-sm" href="#">Shop
-								Now</a>
+							<h4 class="fs-lg fw-light mb-2">Hãy nhanh lên! Ưu đãi trong thời gian có hạn</h4>
+							<h3 class="mb-4">[Tên thương hiệu] đang giảm giá</h3>
+							<a class="btn btn-primary btn-shadow btn-sm" href="#">Mua
+								ngay bây giờ</a>
 						</div>
 						<img class="d-block ms-auto" src="img/shop/catalog/banner.jpg"
 							alt="Shop Converse">
@@ -383,10 +383,10 @@
 						style="background-image: url(img/blog/banner-bg.jpg);">
 						<div class="py-4 my-2 px-4 text-center">
 							<div class="py-1">
-								<h5 class="mb-2">Your Add Banner Here</h5>
-								<p class="fs-sm text-muted">Hurry up to reserve your spot</p>
-								<a class="btn btn-primary btn-shadow btn-sm" href="#">Contact
-									us</a>
+								<h5 class="mb-2">Quảng cáo của bạn tại đây</h5>
+								<p class="fs-sm text-muted">Đặt chỗ ngay - Số lượng có hạn!</p>
+								<a class="btn btn-primary btn-shadow btn-sm" href="#">Liên hệ
+									chúng tôi</a>
 							</div>
 						</div>
 					</div>
@@ -457,7 +457,7 @@
 										<div class="card product-card card-static">
 											<button class="btn-wishlist btn-sm" type="button"
 												data-bs-toggle="tooltip" data-bs-placement="left"
-												title="Add to wishlist">
+												title="Thêm vào danh sách yêu thích">
 												<i class="ci-heart"></i>
 											</button>
 											<a
@@ -512,7 +512,7 @@
 										<div class="card product-card card-static">
 											<button class="btn-wishlist btn-sm" type="button"
 												data-bs-toggle="tooltip" data-bs-placement="left"
-												title="Add to wishlist">
+												title="Thêm vào danh sách yêu thích">
 												<i class="ci-heart"></i>
 											</button>
 											<a

@@ -61,7 +61,7 @@ if(session.getAttribute("uid")!=null){
 							<i class="navbar-tool-icon ci-user"></i>
 						</div>
 						<div class="navbar-tool-text ms-n3">
-							<small>Hello, <%=name[0]%></small>My Account
+							<small>Xin chào, <%=name[0]%></small>Tài khoản của bạn
 						</div>
 					</a>
 					<%}else{ %>

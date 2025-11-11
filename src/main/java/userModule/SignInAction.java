@@ -40,6 +40,8 @@ public class SignInAction extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession();
 		String email = request.getParameter("txtEmail").trim();
@@ -63,7 +65,7 @@ public class SignInAction extends HttpServlet {
 			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
 			if (!rs.isBeforeFirst()) {
-				out.print("<p class='text-danger mt-2'>Invalid Email Or Password<p>");
+				out.print("<p class='text-danger mt-2'>Email hoặc mật khẩu không hợp lệ<p>");
 				loginStatus = false;
 			} else {
 				rs.next();
@@ -79,15 +81,15 @@ public class SignInAction extends HttpServlet {
 			String to = email;
 			String subject = "";
 			if (loginStatus) {
-				subject = "MyECommerceSite : New Login Detected To Your Account";
+				subject = "MyECommerceSite : Đã phát hiện thông tin đăng nhập mới vào tài khoản của bạn";
 			} else {
-				subject = "MyECommerceSite : Unknown Login Attempt Detected To Your Account";
+				subject = "MyECommerceSite : Đã phát hiện nỗ lực đăng nhập không xác định vào tài khoản của bạn";
 			}
 			String body = "";
 			if (loginStatus) {
-				body = "<h1>Hello, " + user_name + "</h1><h3>Your Login Time Is : " + formatter.format(date) + "</h3>";
+				body = "<h1>Hello, " + user_name + "</h1><h3>Thời gian đăng nhập của bạn là : " + formatter.format(date) + "</h3>";
 			} else {
-				body = "<h3 style='color:red'>Unknown / UnsuccesFull Login Attempt Time : " + formatter.format(date)
+				body = "<h3 style='color:red'>Không xác định / Không thành công Thời gian thử đăng nhập đầy đủ : " + formatter.format(date)
 						+ "</h3>";
 			}
 			SendNewEmail emailAttemp = new SendNewEmail();
@@ -97,7 +99,7 @@ public class SignInAction extends HttpServlet {
 			fillcart.include(request, response);
 
 		} catch (Exception e) {
-			out.print("<p class='text-danger mt-2'>Error: " + e.getMessage() + "</p>");
+			out.print("<p class='text-danger mt-2'>Lỗi: " + e.getMessage() + "</p>");
 		}
 	}
 }

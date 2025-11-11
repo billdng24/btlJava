@@ -45,6 +45,8 @@ public class Products extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+    	response.setCharacterEncoding("UTF-8");
 		try (PrintWriter out = response.getWriter()) {
 			// Parameters
 			String category_id = request.getParameter("category_id");
@@ -213,7 +215,7 @@ public class Products extends HttpServlet {
 				}
 
 				out.print(
-						"<button class='btn-wishlist btn-sm' type='button' data-bs-toggle='tooltip' data-bs-placement='left' title='Add to wishlist'><i class='ci-heart'></i></button>");
+						"<button class='btn-wishlist btn-sm' type='button' data-bs-toggle='tooltip' data-bs-placement='left' title='Thêm vào danh sách yêu thích'><i class='ci-heart'></i></button>");
 				out.print("<a class='card-img-top d-block overflow-hidden image-wrapper' href='product-view.jsp?pid="
 						+ rs.getString("product_id") + "&piid=" + rs.getString("product_item_id")
 						+ "'><img src=\"img/shop/products/" + rs3.getString("image_name") + "\" alt='"
@@ -435,9 +437,9 @@ public class Products extends HttpServlet {
 					out.print(
 							"<div class='py-sm-2'><div class='d-sm-flex justify-content-between align-items-center bg-secondary overflow-hidden mb-4 rounded-3'>");
 					out.print("<div class='py-4 my-2 my-md-0 py-md-5 px-4 ms-md-3 text-center text-sm-start'>");
-					out.print("<h4 class='fs-lg fw-light mb-2'>Converse All Star</h4>");
+					out.print("<h4 class='fs-lg fw-light mb-2'>[Tên thương hiệu]</h4>");
 					out.print("<h3 class='mb-4'>Make Your Day Comfortable</h3>");
-					out.print("<a class='btn btn-primary btn-shadow btn-sm' href='#'>Shop Now</a>");
+					out.print("<a class='btn btn-primary btn-shadow btn-sm' href='#'>Mua ngay bây giờ</a>");
 					out.print(
 							"</div><img class='d-block ms-auto' src='img/shop/catalog/banner.jpg' alt='Shop Converse'></div></div>");
 				}

@@ -430,10 +430,10 @@
 								class="bg-size-cover bg-position-center rounded-3 py-5 mx-lg-2"
 								style="background-image: url(img/blog/banner-bg.jpg);">
 								<div class="py-5 px-4 text-center">
-									<h5 class="mb-2">Your Add Banner Here</h5>
-									<p class="fs-sm text-muted">Hurry up to reserve your spot</p>
-									<a class="btn btn-primary btn-shadow btn-sm" href="#">Contact
-										us</a>
+									<h5 class="mb-2">Quảng cáo của bạn tại đây</h5>
+									<p class="fs-sm text-muted">Đặt chỗ ngay - Số lượng có hạn!</p>
+									<a class="btn btn-primary btn-shadow btn-sm" href="#">Liên hệ
+										chúng tôi</a>
 								</div>
 							</div>
 						</div>

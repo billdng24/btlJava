@@ -40,6 +40,8 @@ public class AdminLogin extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		try (PrintWriter out = response.getWriter()) {
 			String txtEmail = request.getParameter("txtEmail");
 			String txtPassword = request.getParameter("txtPassword");
@@ -61,7 +63,7 @@ public class AdminLogin extends HttpServlet {
 				ps.setString(2, txtPassword);
 				ResultSet rs = ps.executeQuery();
 				if (!rs.isBeforeFirst()) {
-					out.print("<p class='text-danger'>Invalid Email Or Password</p>");
+					out.print("<p class='text-danger'>Email hoặc mật khẩu không hợp lệ</p>");
 				} else {
 					rs.next();
 					HttpSession session = request.getSession();
@@ -69,7 +71,7 @@ public class AdminLogin extends HttpServlet {
 					out.print(1);
 				}
 			} catch (SQLException e) {
-				out.print("<p class='text-danger'>Error: " + e.getMessage() + "</p>");
+				out.print("<p class='text-danger'>Lỗi: " + e.getMessage() + "</p>");
 			}
 		}
 	}
