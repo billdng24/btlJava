@@ -1,5 +1,7 @@
 <%@page import="java.sql.*"%>
 <%@page import="conModule.*"%>
+<%@page language="java" contentType="text/html; charset=utf-8"
+		pageEncoding="utf-8" isErrorPage="true"%>
 <%
 ResultSet rsH=null;
 String name[]=null;
@@ -28,7 +30,7 @@ if(session.getAttribute("uid")!=null){
 					<input class="form-control rounded-end pe-5" type="text"
 						name="search"
 						value="<%=request.getParameter("search")!=null?request.getParameter("search"):""%>"
-						placeholder="Search for products">
+						placeholder="Tìm kiếm sản phẩm">
 					<button type="submit"
 						class="border-0 bg-none position-absolute top-50 end-0 translate-middle-y text-muted fs-base me-3">
 						<i class="ci-search"></i>
@@ -59,18 +61,18 @@ if(session.getAttribute("uid")!=null){
 							<i class="navbar-tool-icon ci-user"></i>
 						</div>
 						<div class="navbar-tool-text ms-n3">
-							<small>Hello, <%=name[0]%></small>My Account
+							<small>Xin chào, <%=name[0]%></small>Tài khoản của bạn
 						</div>
 					</a>
 					<%}else{ %>
 					<a class="navbar-tool ms-1 ms-lg-0 me-n1 me-lg-2"
 						href="account-signin.jsp" data-bs-toggle="tooltip"
-						data-bs-placement="bottom" title="SignIn To Access Account">
+						data-bs-placement="bottom" title="Đăng nhập để truy cập tài khoản">
 						<div class="navbar-tool-icon-box">
 							<i class="navbar-tool-icon ci-user"></i>
 						</div>
 						<div class="navbar-tool-text ms-n3">
-							<small>Hello, Sign in</small>My Account
+							<small>Xin chào, Đăng nhập</small>Tài khoản của tôi
 						</div>
 					</a>
 					<%} %>
@@ -91,18 +93,18 @@ if(session.getAttribute("uid")!=null){
 									class="d-flex flex-wrap justify-content-between align-items-center py-3"
 									id="cart-total-value-wrapper">
 									<div class="fs-sm me-2 py-2">
-										<span class="text-muted">Subtotal: </span><span
+										<span class="text-muted">Tổng: </span><span
 											class="text-accent fs-base ms-1"
 											id="cart-total-value-container"></span>
 									</div>
 									<a class="btn btn-outline-secondary btn-sm"
-										href="shop-cart.jsp">Expand cart<i
+										href="shop-cart.jsp">Mở giỏ hàng<i
 										class="ci-arrow-right ms-1 me-n1"></i></a>
 								</div>
 								<a class="btn btn-primary btn-sm d-block w-100"
 									href="<%if(session.getAttribute("uid")!=null){ %>checkout-details.jsp<% }else{ %>account-signin.jsp?checkout=true<% } %>"
 									id="cart-header-checkout"><i
-									class="ci-card me-2 fs-base align-middle"></i>Checkout</a>
+									class="ci-card me-2 fs-base align-middle"></i>Thanh toán</a>
 							</div>
 						</div>
 					</div>
@@ -123,10 +125,10 @@ if(session.getAttribute("uid")!=null){
 					<!-- Primary menu-->
 					<ul class="navbar-nav">
 						<li class="nav-item" id="nav-item-home"><a class="nav-link"
-							href="index.jsp">Home</a></li>
+							href="index.jsp">Trang chủ</a></li>
 						<li class="nav-item dropdown" id="nav-item-categories"><a
 							class="nav-link dropdown-toggle" href="shop-categories.jsp"
-							data-bs-toggle="dropdown">Categories</a>
+							data-bs-toggle="dropdown">Danh mục</a>
 							<div class="dropdown-menu p-0">
 								<div class="d-flex flex-wrap flex-sm-nowrap px-2">
 

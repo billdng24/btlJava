@@ -1,6 +1,13 @@
-<%@page language="java"contentType="text/html; charset=utf-8"
-
-pageEncoding="utf-8"isErrorPage="true"%>< !DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>MyECommerceSite | 500 Error</title>< !-- Imports --><%@include file="components/imports.jsp"%><style>*,
+<%@page language="java" contentType="text/html; charset=utf-8"
+        pageEncoding="utf-8" isErrorPage="true"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MyECommerceSite | 500 Error</title>
+    <!-- Imports -->
+    <%@include file="components/imports.jsp"%>
+    <style>*,
 *::after,
 *::before {
     box-sizing: border-box;
@@ -88,28 +95,28 @@ body {
         opacity:
             1;
         transform:
-            rotate (300deg);
+            rotate(300deg);
         animation-timing-function:
             linear;
     }
 
     30 % {
         transform:
-            rotate (420deg);
+            rotate(420deg);
         animation-timing-function:
             ease-in-out;
     }
 
     35 % {
         transform:
-            rotate (625deg);
+            rotate(625deg);
         animation-timing-function:
             linear;
     }
 
     70 % {
         transform:
-            rotate (800deg);
+            rotate(800deg);
         animation-timing-function:
             ease-out;
         opacity:
@@ -120,7 +127,7 @@ body {
         opacity:
             0;
         transform:
-            rotate (900deg);
+            rotate(900deg);
         animation-timing-function:
             ease-out;
     }
@@ -129,14 +136,14 @@ body {
         opacity:
             0;
         transform:
-            rotate (900deg);
+            rotate(900deg);
     }
 
     100 % {
         opacity:
             0;
         transform:
-            rotate (900deg);
+            rotate(900deg);
     }
 }
 
@@ -190,4 +197,4 @@ p a {
     color: cyan;
 }
 
-</style></head><body><h5>Internal Server error !</h5><h1>5</h1><h1>0 0</h1><div class="box"><span></span><span></span><span></span><span></span><span></span></div><div class="box"><span></span><span></span><span></span><span></span><span></span></div><p>We're unable to find out what's happening ! We suggest you to <br /><a href="index.jsp">Go Back</a>or visit here later. </p></body></html>
+</style></head><body><h5>Lỗi máy chủ nội bộ!</h5><h1>5</h1><h1>0 0</h1><div class="box"><span></span><span></span><span></span><span></span><span></span></div><div class="box"><span></span><span></span><span></span><span></span><span></span></div><p>Chúng tôi không thể tìm ra chuyện gì đang xảy ra! Chúng tôi đề nghị bạn <br /><a href="index.jsp">Quay lại </a>hoặc ghé thăm lại sau.</p></body></html>

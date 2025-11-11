@@ -31,7 +31,7 @@ public class SiteConstants {
 	// SET THE MAXIMUM AGE OF CART COOKIE
 	public static int MAX_COOKIE_AGE_FOR_CART = 60 * 60 * 24;
 
-	public static String COUNTRY_CURRANCY_UNICODE = "&#8377;"; // FOR INDIAN RUPEE SYMBOL
+	public static String COUNTRY_CURRANCY_UNICODE = "&#8363;"; // FOR INDIAN RUPEE SYMBOL
 
 	// SET THE MAXIMUM AGE OF USER COOKIE
 	public static final int MAX_COOKIE_AGE_FOR_USER = 60 * 60 * 24 * 5;

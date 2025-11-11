@@ -28,7 +28,7 @@ if (request.getParameter("pid") != null) {
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MyECommerceSite | Product View</title>
+<title>MyECommerceSite | Xem sản phẩm</title>
 <!-- Imports -->
 <%@include file="components/imports.jsp"%>
 <%
@@ -333,9 +333,9 @@ ResultSet rs;
 						<ol
 							class="breadcrumb breadcrumb-light flex-lg-nowrap justify-content-center justify-content-lg-start">
 							<li class="breadcrumb-item"><a class="text-nowrap"
-								href="index.jsp"><i class="ci-home"></i>Home</a></li>
+								href="index.jsp"><i class="ci-home"></i>Trang chủ</a></li>
 							<li class="breadcrumb-item text-nowrap"><a
-								href="products-rs.jsp?cid=<%=rs.getString("category_id")%>">Shop</a>
+								href="products-rs.jsp?cid=<%=rs.getString("category_id")%>">Cửa hàng</a>
 							</li>
 							<li class="breadcrumb-item text-nowrap active"
 								aria-current="page"><%=rs.getString("category_name")%></li>
@@ -441,10 +441,10 @@ ResultSet rs;
 											%>
 										</div> <span
 										class="d-inline-block fs-sm text-body align-middle mt-1 ms-1"><%=total_reviews%>
-											Reviews</span>
+											Đánh giá</span>
 									</a>
 									<button class="btn-wishlist me-0 me-lg-n3" type="button"
-										data-bs-toggle="tooltip" title="Add to wishlist">
+										data-bs-toggle="tooltip" title="Thêm vào danh sách yêu thích">
 										<i class="ci-heart"></i>
 									</button>
 								</div>
@@ -454,8 +454,8 @@ ResultSet rs;
 
 										<%=FormatPrice.formatPrice(rs.getString("item_listing_price"))%>
 									</del>
-									<span class="badge bg-success badge-shadow align-middle mt-n2"><%=GetPercantege.getPercantage(rs.getInt("item_listing_price"), rs.getInt("item_selling_price"))%>%
-										off</span>
+									<span class="badge bg-success badge-shadow align-middle mt-n2">Giảm <%=GetPercantege.getPercantage(rs.getInt("item_listing_price"), rs.getInt("item_selling_price"))%>%
+										</span>
 								</div>
 								<%
 								int item_quantity = rs.getInt("item_quantity");
@@ -480,26 +480,26 @@ ResultSet rs;
 									if (item_quantity >= 40) {
 									%>
 									<div class="product-badge product-available mt-n1">
-										<i class="ci-security-check"></i> Product available
+										<i class="ci-security-check"></i> Sản phẩm có sẵn
 									</div>
 									<%
 									} else if (item_quantity >= 30) {
 									%>
 									<div class="bg-warning product-badge product-available mt-n1">
-										<i class="bi bi-exclamation-triangle"></i> Product available
+										<i class="bi bi-exclamation-triangle"></i> Sản phẩm có sẵn
 									</div>
 									<%
 									} else if (item_quantity < SiteConstants.STOCK_LEFT_MESSAGE_BADGE_AT && item_quantity >= 1) {
 									%>
 									<div class="bg-danger product-badge product-available mt-n1">
-										<i class="bi bi-graph-up"></i> Hurry Up, Only <b><%=item_quantity%></b>
-										Left
+										<i class="bi bi-graph-up"></i> Nhanh tay lên, chỉ còn <b><%=item_quantity%></b>
+										thôi
 									</div>
 									<%
 									} else if (item_quantity < 1) {
 									%>
 									<div class="bg-danger product-badge product-available mt-n1">
-										<i class="bi bi-x-square"></i> Product Is Out Of Stock
+										<i class="bi bi-x-square"></i> Sản phẩm đã hết hàng
 									</div>
 									<%
 									}
@@ -617,14 +617,14 @@ ResultSet rs;
 											data-pid="<%=product_id%>"
 											data-piid="<%=rs.getString("product_item_id")%>"
 											type="button">
-											<i class="ci-cart fs-lg me-2"></i>Add to Cart
+											<i class="ci-cart fs-lg me-2"></i>Thêm vào giỏ hàng
 										</button>
 										<%
 										} else {
 										%>
 										<button class="btn btn-primary btn-shadow d-block w-100"
 											type="submit" disabled>
-											<i class="ci-cart fs-lg me-2"></i>Add to Cart
+											<i class="ci-cart fs-lg me-2"></i>Thêm vào giỏ hàng
 										</button>
 										<%
 										}
@@ -638,8 +638,8 @@ ResultSet rs;
 											<a class="accordion-button" href="#productInfo" role="button"
 												data-bs-toggle="collapse" aria-expanded="true"
 												aria-controls="productInfo"><i
-												class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product
-												info</a>
+												class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Thông tin
+												sản phẩm</a>
 										</h3>
 										<div class="accordion-collapse collapse show" id="productInfo"
 											data-bs-parent="#productPanels">
@@ -663,8 +663,8 @@ ResultSet rs;
 											<a class="accordion-button collapsed" href="#shippingOptions"
 												role="button" data-bs-toggle="collapse" aria-expanded="true"
 												aria-controls="shippingOptions"><i
-												class="ci-delivery text-muted lead align-middle mt-n1 me-2"></i>Shipping
-												options</a>
+												class="ci-delivery text-muted lead align-middle mt-n1 me-2"></i>Tuỳ chọn
+												vận chuyển</a>
 										</h3>
 										<div class="accordion-collapse collapse" id="shippingOptions"
 											data-bs-parent="#productPanels">
@@ -690,7 +690,7 @@ ResultSet rs;
 									</div>
 								</div>
 								<!-- Sharing-->
-								<label class="form-label d-inline-block align-middle my-2 me-3">Share:</label><a
+								<label class="form-label d-inline-block align-middle my-2 me-3">Chia sẻ:</label><a
 									class="btn-share btn-twitter me-2 my-2" href="#"><i
 									class="ci-twitter"></i>Twitter</a><a
 									class="btn-share btn-instagram me-2 my-2" href="#"><i
@@ -707,7 +707,7 @@ ResultSet rs;
 				<div class="col-lg-5 col-md-6 offset-lg-1 order-md-2 gallery"
 					data-video="true">
 
-					<h6 class="h3 mb-4 pb-2 text-center">Product Image Gallery</h6>
+					<h6 class="h3 mb-4 pb-2 text-center">Thư viện hình ảnh sản phẩm</h6>
 					<!-- Gallery grid with gutters -->
 					<div class="d-flex flex-wrap justify-content-center">
 						<%
@@ -721,7 +721,7 @@ ResultSet rs;
 								data-sub-html='<h6 class="fs-sm text-light">Product Image <%=i + 1%></h6>'>
 								<img src="img/shop/products/<%=path%>" alt="Gallery thumbnail"
 								style="min-height: 180px; max-height: 300px; max-width: 200px; object-fit: scale-down;">
-								<span class="gallery-item-caption">Product Image <%=i + 1%></span>
+								<span class="gallery-item-caption">Ảnh <%=i + 1%></span>
 							</a>
 						</div>
 						<%
@@ -731,13 +731,13 @@ ResultSet rs;
 
 				</div>
 				<div class="col-lg-4 col-md-6 offset-lg-1 py-4 order-md-1">
-					<h2 class="h3 mb-4 pb-2">Product Detail</h2>
+					<h2 class="h3 mb-4 pb-2">Chi tiết sản phẩm</h2>
 					<p class="fs-sm text-muted pb-2"><%=rs.getString("product_description")%></p>
 					<div class="table-responsive">
 						<table class="table table-striped">
 							<thead>
 								<tr>
-									<th colspan="2">More Details</th>
+									<th colspan="2">Thêm chi tiết</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -763,7 +763,7 @@ ResultSet rs;
 				<div class="row pb-3">
 					<div class="col-lg-4 col-md-5">
 						<h2 class="h3 mb-4"><%=total_reviews%>
-							Reviews
+							Đánh giá
 						</h2>
 						<div class="star-rating me-2">
 							<%
@@ -783,7 +783,7 @@ ResultSet rs;
 							%>
 						</div>
 						<span class="d-inline-block align-middle"><%=average%>
-							Overall rating</span>
+							Đánh giá chung</span>
 					</div>
 					<div class="col-lg-8 col-md-7">
 						<div class="d-flex align-items-center mb-2">
@@ -871,13 +871,13 @@ ResultSet rs;
 							<div class="d-flex align-items-center flex-nowrap">
 								<label
 									class="fs-sm text-muted text-nowrap me-2 d-none d-sm-block"
-									for="sort-reviews">Sort by:</label> <select
+									for="sort-reviews">Sắp xếp theo:</label> <select
 									class="form-select form-select-sm" id="sort-reviews">
-									<option>Newest</option>
-									<option>Oldest</option>
-									<option>Popular</option>
-									<option>High rating</option>
-									<option>Low rating</option>
+									<option>Mới nhất</option>
+									<option>Cũ nhất</option>
+									<option>Phổ biến</option>
+									<option>Đánh giá cao</option>
+									<option>Đánh giá thấp</option>
 								</select>
 							</div>
 						</div>
@@ -890,8 +890,8 @@ ResultSet rs;
 						ResultSet reviews = ps.executeQuery();
 						if (!reviews.isBeforeFirst()) {
 						%>
-						<div class='d-flex justify-content-center mt-5 mb-5'>No
-							Reviews Available For This Product</div>
+						<div class='d-flex justify-content-center mt-5 mb-5'>Không
+							có đánh giá nào cho sản phẩm này</div>
 						<%
 						} else {
 						while (reviews.next()) {
@@ -940,7 +940,7 @@ ResultSet rs;
 
 						<div class="text-center">
 							<button class="btn btn-outline-accent" type="button">
-								<i class="ci-reload me-2"></i>Load more reviews
+								<i class="ci-reload me-2"></i>Tải thêm đánh giá
 							</button>
 						</div>
 					</div>
@@ -951,28 +951,28 @@ ResultSet rs;
 					%>
 					<div class="col-md-5 mt-2 pt-4 mt-md-0 pt-md-0">
 						<div class="bg-secondary py-grid-gutter px-grid-gutter rounded-3">
-							<h3 class="h4 pb-2">Write a review</h3>
+							<h3 class="h4 pb-2">Viết đánh giá</h3>
 							<form id="post-review">
 								<div class="mb-3">
-									<label class="form-label" for="review-rating">Rating<span
+									<label class="form-label" for="review-rating">Đánh giá<span
 										class="text-danger">*</span></label> <select class="form-select"
 										required id="review-rating" name="review-rating">
-										<option value="">Choose rating</option>
-										<option value="5">5 stars</option>
-										<option value="4">4 stars</option>
-										<option value="3">3 stars</option>
-										<option value="2">2 stars</option>
-										<option value="1">1 star</option>
+										<option value="">Chọn xếp hạng</option>
+										<option value="5">5 sao</option>
+										<option value="4">4 sao</option>
+										<option value="3">3 sao</option>
+										<option value="2">2 sao</option>
+										<option value="1">1 sao</option>
 									</select>
 								</div>
 								<div class="mb-3">
-									<label class="form-label" for="review-text">Review<span
+									<label class="form-label" for="review-text">Đánh giá<span
 										class="text-danger">*</span></label>
 									<textarea class="form-control" rows="6" required
 										id="review-text" name="review-text" minlength="50"
 										maxlength="255"></textarea>
-									<small class="form-text text-muted">Your review must be
-										at least 50 characters.</small>
+									<small class="form-text text-muted">Đánh giá của bạn phải
+										có ít nhất 50 ký tự.</small>
 								</div>
 								<%
 								ps = cn.prepareStatement(
@@ -989,8 +989,8 @@ ResultSet rs;
 								<input type="hidden" name="hdnreview" value="<%=product_id%>" />
 								<button class="btn btn-primary btn-shadow d-block w-100"
 									data-bs-toggle="tooltip" title="Write A Review"
-									data-bs-placement="bottom" type="submit" <%=value%>>Submit
-									a Review</button>
+									data-bs-placement="bottom" type="submit" <%=value%>>Gửi
+									đánh giá</button>
 							</form>
 							<div class="mt-2" id="reviewPostStatus"></div>
 						</div>
@@ -1017,7 +1017,7 @@ ResultSet rs;
 
 
 		<div class="container pt-5" id="you-may-like">
-			<h2 class="h3 text-center pb-4">Style with</h2>
+			<h2 class="h3 text-center pb-4">Kết hợp với</h2>
 			<div class="tns-carousel tns-controls-static tns-controls-outside">
 				<div class="tns-carousel-inner"
 					data-carousel-options="{&quot;items&quot;: 2, &quot;controls&quot;: true, &quot;nav&quot;: false, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;500&quot;:{&quot;items&quot;:2, &quot;gutter&quot;: 18},&quot;768&quot;:{&quot;items&quot;:3, &quot;gutter&quot;: 20}, &quot;1100&quot;:{&quot;items&quot;:4, &quot;gutter&quot;: 30}}}">
@@ -1026,7 +1026,7 @@ ResultSet rs;
 						<div class="card product-card card-static">
 							<button class="btn-wishlist btn-sm" type="button"
 								data-bs-toggle="tooltip" data-bs-placement="left"
-								title="Add to wishlist">
+								title="Thêm vào danh sách yêu thích">
 								<i class="ci-heart"></i>
 							</button>
 							<a
@@ -1035,10 +1035,10 @@ ResultSet rs;
 								style="object-fit: scale-down; height: 300px;"></a>
 							<div class="card-body py-2">
 								<h3 class="product-title fs-sm">
-									<a href="#">Product Name</a>
+									<a href="#">Tên sản phẩm</a>
 								</h3>
 								<div class="d-flex justify-content-between">
-									<div class="product-price text-accent">PRICE HERE</div>
+									<div class="product-price text-accent">GIÁ TẠI ĐÂY</div>
 								</div>
 							</div>
 						</div>
@@ -1051,7 +1051,7 @@ ResultSet rs;
 
 		<!-- Product carousel (You may also like)-->
 		<div class="container py-5 my-md-3">
-			<h2 class="h3 text-center pb-4">You may also like</h2>
+			<h2 class="h3 text-center pb-4">Bạn có thể thích</h2>
 			<div class="tns-carousel tns-controls-static tns-controls-outside">
 				<div class="tns-carousel-inner"
 					data-carousel-options="{&quot;items&quot;: 2, &quot;controls&quot;: true, &quot;nav&quot;: false, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;500&quot;:{&quot;items&quot;:2, &quot;gutter&quot;: 18},&quot;768&quot;:{&quot;items&quot;:3, &quot;gutter&quot;: 20}, &quot;1100&quot;:{&quot;items&quot;:4, &quot;gutter&quot;: 30}}}">
@@ -1070,7 +1070,7 @@ ResultSet rs;
 						<div class="card product-card card-static">
 							<button class="btn-wishlist btn-sm" type="button"
 								data-bs-toggle="tooltip" data-bs-placement="left"
-								title="Add to wishlist">
+								title="Thêm vào danh sách yêu thích">
 								<i class="ci-heart"></i>
 							</button>
 							<a class="card-img-top d-block overflow-hidden"

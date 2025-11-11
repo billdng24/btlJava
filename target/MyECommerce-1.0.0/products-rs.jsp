@@ -89,7 +89,7 @@ if (request.getParameter("cid") != null) {
 												Reviews</span>
 										</a>
 										<button class="btn-wishlist" type="button"
-											data-bs-toggle="tooltip" title="Add to wishlist">
+											data-bs-toggle="tooltip" title="Thêm vào danh sách yêu thích">
 											<i class="ci-heart"></i>
 										</button>
 									</div>

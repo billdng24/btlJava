@@ -43,6 +43,8 @@ public class QuickView extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		try (PrintWriter out = response.getWriter()) {
 			String product_id = request.getParameter("product_id");
 			String product_item_id = request.getParameter("product_item_id");
@@ -176,7 +178,7 @@ public class QuickView extends HttpServlet {
 			out.print(
 					"</div><span class='d-inline-block fs-sm text-body align-middle mt-1 ms-1'>74	Reviews</span></a>");
 			out.print(
-					"<button class='btn-wishlist' type='button' data-bs-toggle='tooltip' title='Add to wishlist'><i class='ci-heart'></i></button></div>");
+					"<button class='btn-wishlist' type='button' data-bs-toggle='tooltip' title='Thêm vào danh sách yêu thích'><i class='ci-heart'></i></button></div>");
 			out.print("<div class='mb-3'>");
 			out.print("<span class='h3 fw-normal text-accent me-1'>"
 					+ FormatPrice.formatPrice(rs.getString("item_selling_price")) + "</span> ");

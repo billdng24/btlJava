@@ -153,14 +153,14 @@ function cartHeader(){
 				$("#cart-item-count-on-header").fadeIn("slow");
 				$("#cart-total-value-container").html(cartTotal);
 				$("#cart-item-count-on-header").text(cartItems);
-				$("#price-label-under-MyCart").html("<small>My Cart</small>"+cartTotal);
+				$("#price-label-under-MyCart").html("<small>Giỏ hàng của bạn</small>"+cartTotal);
 			}else{
 				$("#cart-total-value-wrapper").removeClass("d-flex");
 				$("#cart-total-value-wrapper").hide();
 				$("#cart-header-checkout").attr("href","shop-categories.jsp");
-				$("#cart-header-checkout").html('<i class="ci-bag me-2 fs-base align-middle"></i>Let\'s Shop');
+				$("#cart-header-checkout").html('<i class="ci-bag me-2 fs-base align-middle"></i>Hãy mua sắm');
 				$("#cart-item-count-on-header").hide();
-				$("#price-label-under-MyCart").html("<small>My Cart</small>");				
+				$("#price-label-under-MyCart").html("<small>Giỏ hàng của bạn</small>");
 			}
 		}
 	});

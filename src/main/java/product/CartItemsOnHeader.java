@@ -41,6 +41,8 @@ public class CartItemsOnHeader extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+    	response.setCharacterEncoding("UTF-8");
 		try (PrintWriter out = response.getWriter()) {
 			ArrayList<Cart> cart = new ArrayList<>();
 			int cartTotal = 0;
@@ -64,7 +66,7 @@ public class CartItemsOnHeader extends HttpServlet {
 					}
 				} else {
 					out.print("<div class='d-flex justify-content-center align-items-center'>");
-					out.print("<h6 class='display-6'>Cart Is Empty</h6>");
+					out.print("<h6 class='display-6'>Giỏ hàng trống</h6>");
 					out.print("</div>");
 					out.print("<input type='hidden' id='cart-total-value' value='" + cartTotal + "' >");
 					out.print("<input type='hidden' id='cart-total-items-value' value='" + totalItems + "'>");
@@ -91,7 +93,7 @@ public class CartItemsOnHeader extends HttpServlet {
 					}
 				} else {
 					out.print("<div class='d-flex justify-content-center align-items-center'>");
-					out.print("<h6 class='h6'>Cart Is Empty</h6>");
+					out.print("<h6 class='h6'>Giỏ hàng trống</h6>");
 					out.print("</div>");
 					out.print("<input type='hidden' id='cart-total-value' value='" + cartTotal + "'>");
 					out.print("<input type='hidden' id='cart-total-items-value' value='" + totalItems + "'>");

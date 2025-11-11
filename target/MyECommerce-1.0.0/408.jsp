@@ -1,6 +1,14 @@
-<%@page language="java"contentType="text/html; charset=utf-8"
-
-pageEncoding="utf-8"isErrorPage="true"%>< !DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>MyECommerceSite | 408 Error</title>< !-- Imports --><%@include file="components/imports.jsp"%><style>html {
+<%@page language="java" contentType="text/html; charset=utf-8"
+        pageEncoding="utf-8" isErrorPage="true"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MyECommerceSite | 408 Error</title>
+    <!-- Imports -->
+    <%@include file="components/imports.jsp"%>
+    <style>
+        html {
     box-sizing: border-box;
 }
 
@@ -852,4 +860,4 @@ body .timer-container .timer .body .border .inner-body .hand .center {
     }
 }
 
-</style></head><body><div class="status-wrapper"><div class="number">4</div><div class="timer-container"><div class="exclamation-marks"><div class="exclamation"></div><div class="exclamation"></div><div class="exclamation"></div><div class="exclamation"></div></div><div class="timer"><div class="handle-group"><div class="handle"><div class="border"><div class="inner"></div></div></div><div class="base"></div></div><div class="body"><div class="button-group"><div class="base"></div><div class="button"></div></div><div class="border"><div class="inner-body-group"><div class="border-gaps"></div><div class="inner-body"><div class="reflection"></div><div class="hours"><div class="hour"></div><div class="hour"></div><div class="hour"></div><div class="hour"></div><div class="hour"></div><div class="hour"></div><div class="hour"></div><div class="hour"></div></div><div class="hand"><div class="center"></div></div></div></div></div></div></div></div><div class="number last">8</div><div class="messages bottom"><p class="server p-2 text-center">Request time Out</p></div></div></body></html>
+</style></head><body><div class="status-wrapper"><div class="number">4</div><div class="timer-container"><div class="exclamation-marks"><div class="exclamation"></div><div class="exclamation"></div><div class="exclamation"></div><div class="exclamation"></div></div><div class="timer"><div class="handle-group"><div class="handle"><div class="border"><div class="inner"></div></div></div><div class="base"></div></div><div class="body"><div class="button-group"><div class="base"></div><div class="button"></div></div><div class="border"><div class="inner-body-group"><div class="border-gaps"></div><div class="inner-body"><div class="reflection"></div><div class="hours"><div class="hour"></div><div class="hour"></div><div class="hour"></div><div class="hour"></div><div class="hour"></div><div class="hour"></div><div class="hour"></div><div class="hour"></div></div><div class="hand"><div class="center"></div></div></div></div></div></div></div></div><div class="number last">8</div><div class="messages bottom"><p class="server p-2 text-center">Yêu cầu thời gian chờ</p></div></div></body></html>
