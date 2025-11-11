@@ -16,10 +16,10 @@
 			<div class="noentry">
 				<div class="ban"></div>
 				<div class="messagebox">
-					<h2>RESTRICTED ACCESS</h2>
-					<p>This page is meant to only be accessed by certain people.</p>
+					<h2>TRUY CẬP BỊ HẠN CHẾ</h2>
+					<p>Trang này chỉ dành cho một số người nhất định được phép truy cập.</p>
 					<a class="mt-2 mb-5 btn btn-outline-primary rounded-3"
-						href="index.jsp">Go Back</a>
+						href="index.jsp">Quay lại</a>
 				</div>
 			</div>
 		</div>
