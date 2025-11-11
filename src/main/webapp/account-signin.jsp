@@ -31,7 +31,7 @@ if (session.getAttribute("uid") != null) {
 				<div class="col-md-6">
 					<div class="card border-0 shadow">
 						<div class="card-body">
-							<h2 class="h4 mb-3">Sign in</h2>
+							<h2 class="h4 mb-3">Đăng Nhập</h2>
 							<!-- 
                 <div class="py-3">
                   <h3 class="d-inline-block align-middle fs-base fw-medium mb-2 me-2">With social account:</h3>
@@ -66,7 +66,7 @@ if (session.getAttribute("uid") != null) {
 										class="ci-locked position-absolute top-50 translate-middle-y text-muted fs-base ms-3"></i>
 									<div class="password-toggle w-100">
 										<input class="form-control" type="password"
-											placeholder="Password" name="txtPassword"
+											placeholder="Mật khẩu" name="txtPassword"
 											value="<%=password%>" required> <label
 											class="password-toggle-btn" aria-label="Show/hide password">
 											<input class="password-toggle-check" type="checkbox"><span
@@ -78,17 +78,16 @@ if (session.getAttribute("uid") != null) {
 									<div class="form-check">
 										<input class="form-check-input text-primary" type="checkbox"
 											checked id="remember_me" name="chkRemember"> <label
-											class="form-check-label" for="remember_me">Remember
-											me</label>
+											class="form-check-label" for="remember_me">Ghi nhớ tôi</label>
 									</div>
 									<a class="nav-link-inline fs-sm text-primary"
-										href="account-password-recovery.jsp">Forgot password?</a>
+										href="account-password-recovery.jsp">Quên mật khẩu?</a>
 								</div>
 								<div class="mt-1 mb-1" id="msg"></div>
 								<hr class="mt-4">
 								<div class="text-end pt-4">
 									<button class="btn btn-primary" type="submit" id="btnSignIn">
-										<i class="ci-sign-in me-2 ms-n21"></i>Sign In
+										<i class="ci-sign-in me-2 ms-n21"></i>Đăng Nhập
 									</button>
 								</div>
 							</form>
@@ -96,47 +95,44 @@ if (session.getAttribute("uid") != null) {
 					</div>
 				</div>
 				<div class="col-md-6 pt-4 mt-3 mt-md-0">
-					<h2 class="h4 mb-3">No account? Sign up</h2>
-					<p class="fs-sm text-muted mb-4">Registration takes less than a
-						minute but gives you full control over your orders.</p>
+					<h2 class="h4 mb-3">Không có tài khoản? Đăng ký ngay</h2>
+					<p class="fs-sm text-muted mb-4">Việc đăng ký mất chưa đến một phút nhưng cho phép bạn kiểm soát hoàn toàn đơn hàng của mình.</p>
 					<form class="needs-validation" id="formSignUp">
 						<div class="row gx-4 gy-3">
 							<div class="col-sm-12">
-								<label class="form-label" for="txtName">Name</label> <input
+								<label class="form-label" for="txtName">Tên</label> <input
 									class="form-control" type="text" required id="reg-ln"
 									name="txtName">
-								<div class="invalid-feedback">Please enter your last name!</div>
+								<div class="invalid-feedback">Vui lòng nhập họ tên của bạn!</div>
 							</div>
 							<div class="col-sm-6">
-								<label class="form-label" for="txtEmail">E-mail Address</label>
+								<label class="form-label" for="txtEmail">E-mail</label>
 								<input class="form-control" type="email" required id="reg-email"
 									name="txtEmail">
-								<div class="invalid-feedback">Please enter valid email
-									address!</div>
+								<div class="invalid-feedback">Vui lòng nhập địa chỉ email hợp lệ!</div>
 							</div>
 							<div class="col-sm-6">
-								<label class="form-label" for="txtMobile">Phone Number</label> <input
+								<label class="form-label" for="txtMobile">Số điện thoại</label> <input
 									class="form-control" type="text" required id="reg-phone"
 									name="txtMobile">
-								<div class="invalid-feedback">Please enter your phone
-									number!</div>
+								<div class="invalid-feedback">Vui lòng nhập số điện thoại của bạn!</div>
 							</div>
 							<div class="col-sm-6">
-								<label class="form-label" for="txtPassword">Password</label> <input
+								<label class="form-label" for="txtPassword">Mật khẩu</label> <input
 									class="form-control" type="password" required
 									name="txtPassword" id="txtPassword">
-								<div class="invalid-feedback">Please enter password!</div>
+								<div class="invalid-feedback">Vui lòng nhập mật khẩu!</div>
 							</div>
 							<div class="col-sm-6">
-								<label class="form-label" for="txtConPassword">Confirm
-									Password</label> <input class="form-control" type="password" required
+								<label class="form-label" for="txtConPassword">Xác nhận
+									Mật khẩu</label> <input class="form-control" type="password" required
 									id="txtConPassword" name="txtConPassword">
-								<div class="invalid-feedback">Passwords do not match!</div>
+								<div class="invalid-feedback">Mật khẩu không khớp!</div>
 							</div>
 							<div class="mt-1 mb-1" id="msg2"></div>
 							<div class="col-12 text-end">
 								<button class="btn btn-primary" type="submit" id="btnSignUp">
-									<i class="ci-user me-2 ms-n1"></i>Sign Up
+									<i class="ci-user me-2 ms-n1"></i>Đăng ký
 								</button>
 							</div>
 						</div>
@@ -171,7 +167,7 @@ if (session.getAttribute("uid") != null) {
 																		.hide();
 																$("#btnSignIn")
 																		.html(
-																				'<span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span> Signing In...');
+																				'<span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span> Đang đăng nhập...');
 																$("#btnSignIn")
 																		.fadeIn(
 																				"slow");
@@ -242,7 +238,7 @@ if (session.getAttribute("uid") != null) {
 																	$(
 																			"#btnSignUp")
 																			.html(
-																					'<span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span> Signing Up...');
+																					'<span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span> Đang đăng ký...');
 																	$(
 																			"#btnSignUp")
 																			.fadeIn(
