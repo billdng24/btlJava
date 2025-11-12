@@ -4,7 +4,7 @@ pageEncoding="utf-8"%>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>MyECommerceSite | Help-Topics</title>
+    <title>UnetiShop | Help-Topics</title>
     <!-- Imports -->
     <%@include file="components/imports.jsp"%>
   </head>

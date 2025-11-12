@@ -32,7 +32,7 @@ if (request.getParameter("cid") != null) {
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MyECommerceSite | Products</title>
+<title>UnetiShop | Products</title>
 <!-- Imports -->
 <%@include file="components/imports.jsp"%>
 </head>

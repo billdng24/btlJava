@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MyECommerceSite | 401 Error</title>
+<title>UnetiShop | 401 Error</title>
 <!-- Imports -->
 <%@include file="components/imports.jsp"%>
 </head>

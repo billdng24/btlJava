@@ -12,7 +12,7 @@ ResultSet rs;
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MyECommerceSite | My orders</title>
+<title>UnetiShop | My orders</title>
 
 <%@include file="components/imports.jsp"%>
 

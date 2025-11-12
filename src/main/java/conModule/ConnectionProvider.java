@@ -9,7 +9,7 @@ public class ConnectionProvider {
 	public static Connection getCon() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/eshop", "root", "your_password");
+			Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/eshop", "root", "Nguyen96#");
 			return cn;
 		} catch (SQLException | ClassNotFoundException e) {
 			return null;

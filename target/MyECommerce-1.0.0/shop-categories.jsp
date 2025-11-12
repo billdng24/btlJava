@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MyECommerceSite | Shop categories</title>
+<title>UnetiShop | Shop categories</title>
 <%@include file="components/imports.jsp"%>
 
 </head>
