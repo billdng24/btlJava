@@ -12,7 +12,7 @@ if (request.getParameter("verify") != null && request.getParameter("email") != n
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MyECommerceSite | Password Renewal</title>
+<title>UnetiShop | Password Renewal</title>
 <%@include file="components/imports.jsp"%>
 
 </head>

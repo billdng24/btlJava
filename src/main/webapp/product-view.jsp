@@ -28,7 +28,7 @@ if (request.getParameter("pid") != null) {
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MyECommerceSite | Xem sản phẩm</title>
+<title>UnetiShop | Xem sản phẩm</title>
 <!-- Imports -->
 <%@include file="components/imports.jsp"%>
 <%

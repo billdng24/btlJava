@@ -59,6 +59,8 @@ public class ManageCompany extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		try (PrintWriter out = response.getWriter()) {
 			HttpSession session = request.getSession();
 			Connection cn = ConnectionProvider.getCon();
@@ -87,20 +89,20 @@ public class ManageCompany extends HttpServlet {
 			ps.execute();
 			// out.print(company_email);
 			String to = company_email;
-			String subject = "MyECommerceSite: Company Verification Email";
-			String body = "<h2>Click Below Link To Verify</h2><h5><a href='" + SiteConstants.SITE_URL
-					+ "/ManageCompany?varification=1&company_id=" + company_id + "'>Verify Me</a></h5>";
+			String subject = "UnetiShop: Email xác minh công ty";
+			String body = "<h2>Nhấp vào liên kết bên dưới để xác minh</h2><h5><a href='" + SiteConstants.SITE_URL
+					+ "/ManageCompany?varification=1&company_id=" + company_id + "'>Xác nhận</a></h5>";
 			SendNewEmail email = new SendNewEmail();
 			boolean isSent = email.send(to, subject, body);
 			if (isSent) {
 				out.print(
-						"<p class='text-success'>Check Your Mail Box For varification Mail! You can Start Listing Products After varification</p>");
+						"<p class='text-success'>Kiểm tra hộp thư của bạn để nhận thư xác minh! Bạn có thể bắt đầu niêm yết sản phẩm sau khi xác minh.</p>");
 				ps = cn.prepareStatement("UPDATE site_admins SET password=? WHERE admin_id=?");
 				ps.setString(1, Password);
 				ps.setString(2, session.getAttribute("aid").toString());
 				ps.execute();
 			} else {
-				out.print("<p class='text-danger'>There is Something Wrong At our Side Please Try After Some time</p>");
+				out.print("<p class='text-danger'>Có điều gì đó không ổn ở phía chúng tôi. Vui lòng thử lại sau một thời gian.</p>");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

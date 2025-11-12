@@ -24,7 +24,7 @@ if(session.getAttribute("uid")!=null){
 				<a class="navbar-brand d-flex flex-shrink-0 align-items-center"
 					style="font-size: 0.879rem" href="index.jsp"><img
 					class="rounded-circle" style="max-width: 40px;" src="img/logo.png"
-					alt="MyECommerceSite">&nbsp;MyECommerceSite</a>
+					alt="UnetiShop">&nbsp;UnetiShop</a>
 				<form class="input-group d-none d-lg-flex mx-4"
 					action="products-rs.jsp">
 					<input class="form-control rounded-end pe-5" type="text"

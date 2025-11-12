@@ -39,6 +39,8 @@ public class PasswordRecoveryEmail extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		try (PrintWriter out = response.getWriter()) {
 			String email = request.getParameter("Email").trim();
 			Connection cn = ConnectionProvider.getCon();
@@ -48,7 +50,7 @@ public class PasswordRecoveryEmail extends HttpServlet {
 			ResultSet rs = ps.executeQuery();
 			if (!rs.isBeforeFirst()) {
 				out.print(
-						"<p class='text-danger'>Given Email Does Not Exist In Our System,<small class='text-warning'>Please Provide valid Email</small></p>");
+						"<p class='text-danger'>Email đã cho không tồn tại trong hệ thống của chúng tôi,<small class='text-warning'> vui lòng cung cấp Email hợp lệ</small></p>");
 				return;
 			}
 			rs.next();
@@ -56,14 +58,14 @@ public class PasswordRecoveryEmail extends HttpServlet {
 			// String hash = GenerateRandomString.generateString();
 
 			String to = email;
-			String subject = "Password Recovery Email For MyECommerceSite -admin";
-			String body = "<h2>Hello," + rs.getString("admin_name")
-					+ "</h2><br/><h3>Click Below Link To Reset Password</h3><a href='" + SiteConstants.SITE_URL
+			String subject = "Email khôi phục mật khẩu cho Uneti -admin";
+			String body = "<h2>Xin chào," + rs.getString("admin_name")
+					+ "</h2><br/><h3>Nhấp vào liên kết bên dưới để đặt lại mật khẩu</h3><a href='" + SiteConstants.SITE_URL
 					+ "/admin/SetNewPassword.jsp?verify=1&&email=" + email + "&&aid=" + rs.getString("admin_id")
-					+ "'>Reset Password</a>";
+					+ "'>Đặt lại mật khẩu</a>";
 			SendNewEmail send = new SendNewEmail();
 			send.send(to, subject, body);
-			out.print("<p class='text-success'>Password Reset Link Sent SuccessFully</p>");
+			out.print("<p class='text-success'>Liên kết đặt lại mật khẩu đã được gửi thành công</p>");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

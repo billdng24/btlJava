@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MyECommerceSite | Home</title>
+<title>UnetiShop | Home</title>
 <!-- Imports -->
 <%@include file="components/imports.jsp"%>
 

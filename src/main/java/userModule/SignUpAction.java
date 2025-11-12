@@ -40,6 +40,8 @@ public class SignUpAction extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
 		PrintWriter out = response.getWriter();
 		String username = request.getParameter("txtName");
@@ -57,7 +59,7 @@ public class SignUpAction extends HttpServlet {
 			ps.setString(1, email);
 			rs = ps.executeQuery();
 			if (rs.isBeforeFirst()) {
-				out.print("<p class='text-warning mt-2'>User with Same Email exists");
+				out.print("<p class='text-warning mt-2'>Email đã tồn tại! Vui lòng đăng ký email khác");
 			} else {
 				ps = con.prepareStatement(
 						"INSERT INTO site_users (user_name,user_email,user_phone,user_password) VALUES(?,?,?,?)");
@@ -74,10 +76,10 @@ public class SignUpAction extends HttpServlet {
 			}
 			// Greeting Email
 			String to = email;
-			String subject = "Hello " + username + ", Welcome To MyECommerceSite";
-			String body = "<h1>Hello," + username
+			String subject = "Xin chào " + username + ", Chào mừng đến với UnetiShop";
+			String body = "<h1>Xin chào," + username
 					+ "</h1><h4><a style='color:cyan;text-decoration:none;font-weight:700;' href='"
-					+ SiteConstants.SITE_URL + "/index.jsp'>Start Shopping</a></h4>";
+					+ SiteConstants.SITE_URL + "/index.jsp'>Bắt đầu mua sắm</a></h4>";
 			SendNewEmail greet = new SendNewEmail();
 			greet.send(to, subject, body);
 
@@ -85,7 +87,7 @@ public class SignUpAction extends HttpServlet {
 			fillcart.include(request, response);
 
 		} catch (Exception e) {
-			out.print("<p class='text-danger mt-2'>Error: " + e.getMessage() + "</p>");
+			out.print("<p class='text-danger mt-2'>Lỗi: " + e.getMessage() + "</p>");
 		}
 	}
 }

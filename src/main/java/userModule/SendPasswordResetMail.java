@@ -39,6 +39,8 @@ public class SendPasswordResetMail extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		try (PrintWriter out = response.getWriter()) {
 			String email = request.getParameter("recover-email");
 			Connection cn = ConnectionProvider.getCon();
@@ -47,18 +49,18 @@ public class SendPasswordResetMail extends HttpServlet {
 			ResultSet rs = ps.executeQuery();
 			if (!rs.isBeforeFirst()) {
 				out.print(
-						"<p class='text-danger'>Given Email Does Not Exist In Our System,<small><a class='text-info' href='account-signin.jsp'>Try creating New Account</a></small></p>");
+						"<p class='text-danger'>Email đã cho không tồn tại trong hệ thống của chúng tôi,<small><a class='text-info' href='account-signin.jsp'>Hãy thử tạo Tài khoản mới</a></small></p>");
 				return;
 			}
 			rs.next();
 			String to = email;
-			String subject = "Password Recovery Email For MyECommerceSite";
+			String subject = "Email khôi phục mật khẩu cho UnetiShop";
 			String body = "<h2>Hello," + rs.getString("user_name")
-					+ "</h2><br/><h3>Click Below Link To Reset Password</h3><a href='" + SiteConstants.SITE_URL
-					+ "/account-password-renewal.jsp?verify=1&&email=" + email + " '>Reset Password</a>";
+					+ "</h2><br/><h3>Nhấp vào liên kết bên dưới để đặt lại mật khẩu</h3><a href='" + SiteConstants.SITE_URL
+					+ "/account-password-renewal.jsp?verify=1&&email=" + email + " '>Đặt lại mật khẩu</a>";
 			SendNewEmail send = new SendNewEmail();
 			send.send(to, subject, body);
-			out.print("<p class='text-success'>Password Reset Link Sent SuccessFully</p>");
+			out.print("<p class='text-success'>Liên kết đặt lại mật khẩu đã được gửi thành công</p>");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -14,19 +14,19 @@
 
 		<form class="container text-center col-md-4 mt-5 mb-5 form" action=""
 			method="POST" id="frmRecovery" data-aos="fade-up">
-			<h1 class="display-4 mb-3">Recover Password</h1>
+			<h1 class="display-4 mb-3">Khôi phục mật khẩu</h1>
 			<div class="form-floating mb-3 mt-5">
 				<input type="email" class="form-control" id="Email" name="Email"
 					placeholder="name@example.com" required /> <label for="Email">Email</label>
 			</div>
 			<div class="checkbox mb-2 text-center">
 				<p>
-					Enter Your Email, We Will Send You A <b>Recovery Link</b>
+					Nhập Email của bạn, chúng tôi sẽ gửi cho bạn một <b>Liên kết khôi phục</b>
 				</p>
 			</div>
 			<div class="mb-2 mt-2" id="msg"></div>
-			<button class="w-100 btn btn-lg btn-primary" type="submit">Send
-				Recovery Link</button>
+			<button class="w-100 btn btn-lg btn-primary" type="submit">Gửi
+				liên kết</button>
 		</form>
 	</main>
 	<%@include file="components/footer.jsp"%>

@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MyECommerceSite | My Cart</title>
+<title>UnetiShop | My Cart</title>
 <!-- Imports -->
 <%@include file="components/imports.jsp"%>
 </head>

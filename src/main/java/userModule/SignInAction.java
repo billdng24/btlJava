@@ -81,9 +81,9 @@ public class SignInAction extends HttpServlet {
 			String to = email;
 			String subject = "";
 			if (loginStatus) {
-				subject = "MyECommerceSite : Đã phát hiện thông tin đăng nhập mới vào tài khoản của bạn";
+				subject = "UnetiShop : Đã phát hiện thông tin đăng nhập mới vào tài khoản của bạn";
 			} else {
-				subject = "MyECommerceSite : Đã phát hiện nỗ lực đăng nhập không xác định vào tài khoản của bạn";
+				subject = "UnetiShop : Đã phát hiện nỗ lực đăng nhập không xác định vào tài khoản của bạn";
 			}
 			String body = "";
 			if (loginStatus) {

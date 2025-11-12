@@ -118,7 +118,6 @@ public class GenerateOrderinvoice extends HttpServlet {
 
 	private static void createTable(Document document, HttpServletRequest request)
 			throws DocumentException, SQLException {
-
 		Connection cn = ConnectionProvider.getCon();
 		ResultSet rs;
 		PreparedStatement ps;
@@ -241,19 +240,19 @@ public class GenerateOrderinvoice extends HttpServlet {
 				rs = ps.executeQuery();
 				rs.next();
 
-				TableCell = new PdfPCell(new Phrase("Sub Total: "));
+				TableCell = new PdfPCell(new Phrase("Tổng : "));
 				TableCell.setColspan(5);
 				table.addCell(TableCell);
 				TableCell = new PdfPCell(new Phrase(currency_symbol + SubTotal));
 				table.addCell(TableCell);
 
-				TableCell = new PdfPCell(new Phrase("Shipping Charges : "));
+				TableCell = new PdfPCell(new Phrase("Phí vận chuyển : "));
 				TableCell.setColspan(5);
 				table.addCell(TableCell);
 				TableCell = new PdfPCell(new Phrase(currency_symbol + rs.getString("price")));
 				table.addCell(TableCell);
 
-				TableCell = new PdfPCell(new Phrase("Grand Total : "));
+				TableCell = new PdfPCell(new Phrase("Tổng cộng : "));
 				TableCell.setColspan(5);
 				table.addCell(TableCell);
 				TableCell = new PdfPCell(new Phrase(currency_symbol + rs.getString("order_total")));
@@ -262,7 +261,7 @@ public class GenerateOrderinvoice extends HttpServlet {
 				document.add(table);
 
 				creteEmptyLine(preface, 5);
-				preface.add(new Paragraph("Thank You For Choosing MyECommerceSite, We Hope You've Enjoyed Shopping"));
+				preface.add(new Paragraph("Cảm ơn bạn đã chọn UnetiShop, chúng tôi hy vọng bạn đã có trải nghiệm mua sắm thú vị"));
 				document.add(preface);
 				preface.clear();
 
@@ -272,7 +271,7 @@ public class GenerateOrderinvoice extends HttpServlet {
 
 		} else {
 			creteEmptyLine(preface, 2);
-			preface.add(new Paragraph("Invoice Will be Genarated After Payment"));
+			preface.add(new Paragraph("Hóa đơn sẽ được tạo sau khi thanh toán"));
 			document.add(preface);
 			preface.clear();
 		}
@@ -299,6 +298,8 @@ public class GenerateOrderinvoice extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		try {
 			final ServletContext servletContext = request.getSession().getServletContext();
 			final File tempDirectory = (File) servletContext.getAttribute("javax.servlet.context.tempdir");

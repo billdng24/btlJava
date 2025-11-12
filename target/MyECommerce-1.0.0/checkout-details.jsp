@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MyECommerceSite | Checkout-Details</title>
+<title>UnetiShop | Checkout-Details</title>
 <!-- Imports -->
 <%@include file="components/imports.jsp"%>
 </head>

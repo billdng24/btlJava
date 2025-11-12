@@ -40,6 +40,8 @@ public class PlaceOrder extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		try (PrintWriter out = response.getWriter()) {
 
 			String cash_on_delivery = request.getParameter("cash-on-delivery");
@@ -117,10 +119,10 @@ public class PlaceOrder extends HttpServlet {
 			rs.next();
 
 			String to = rs.getString("user_email");
-			String subject = "Hello, " + rs.getString("user_name") + " Here's Your invoice for Order " + order_id;
-			String body = "<h2>Thank You for your Purchase From MyECommerceSite</h2><br/><p> You Can Download Your invoice From Here</p><br/><a href='"
+			String subject = "Xin chào, " + rs.getString("user_name") + " Đây là hóa đơn của bạn cho đơn hàng " + order_id;
+			String body = "<h2>Cảm ơn bạn đã mua hàng từ UnetiShop</h2><br/><p> bạn có thể tải xuống hóa đơn của mình từ đây</p><br/><a href='"
 					+ SiteConstants.SITE_URL + "/GenerateOrderinvoice?oid=" + order_id + "&uid="
-					+ session.getAttribute("uid") + "' >Click here To Download invoice</a>";
+					+ session.getAttribute("uid") + "' >Nhấp vào đây để tải xuống hóa đơn</a>";
 			SendNewEmail email = new SendNewEmail();
 			email.send(to, subject, body);
 

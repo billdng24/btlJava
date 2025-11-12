@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>MyECommerceSite | 403 Error</title>
+    <title>UnetiShop | 403 Error</title>
     <!-- Imports -->
     <%@include file="components/imports.jsp"%>
     <style>* {
